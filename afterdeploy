@@ -1,0 +1,17 @@
+
+#!/bin/bash
+
+# Enable debug mode to print commands before executing
+set -x
+
+# Move up one directory
+cd codebase_reapfolio-backend/
+
+# Print npm version
+npm --version
+
+# Install knex locally
+npm install knex
+
+# Run knex migration to apply the latest changes
+npx knex migrate:latest
